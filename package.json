@@ -1,0 +1,48 @@
+{
+  "name": "dsh-composer-enhance",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "One four-point star in the composer rewrites the draft in place into a clearer prompt, with a one-click back button.",
+  "license": "MIT",
+  "author": "NUAAHANDA",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "prompt",
+    "composer"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NUAAHANDA/dsh-composer-enhance.git"
+  },
+  "homepage": "https://github.com/NUAAHANDA/dsh-composer-enhance#readme",
+  "bugs": {
+    "url": "https://github.com/NUAAHANDA/dsh-composer-enhance/issues"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg"
+  ],
+  "scripts": {
+    "test": "node host.test.mjs && node smoke.mjs client.js"
+  },
+  "dsh": {
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "immediately": false,
+      "inject": ["@deepseek-ai/dsh-client-ui-conversation"]
+    }
+  }
+}

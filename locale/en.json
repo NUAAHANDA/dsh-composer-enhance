@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Prompt enhance",
+    "description": "While the composer has text, a four-point star appears in its tool row. One click rewrites the draft in place with the current model: still one editable paragraph, and a back button appears beside the star so a single click restores the text you had. A rewrite costs one model call; the star spins while it runs and a failure is reported beside it. Clearing the draft hides both buttons."
+  }
+}

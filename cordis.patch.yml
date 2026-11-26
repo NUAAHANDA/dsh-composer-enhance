@@ -1,0 +1,4 @@
+# dsh bundle patch: inserts the composer-enhance seat into the profile's layer stack.
+- insert:
+    - id: composer-enhance
+      name: dsh-composer-enhance
